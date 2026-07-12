@@ -4,12 +4,12 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run local",
+    "dev": "node init && npm run local",
     "local": "node server.js --mode local",
     "production": "node server.js --mode production --prod",
-    "build": "npm run build:production",
-    "build:local": "vite build --mode development --outDir dist/client --ssrManifest && vite build --mode development --ssr src/entry-server.js --outDir dist/server",
-    "build:production": "vite build --mode production --outDir dist/client --ssrManifest && vite build --mode production --ssr src/entry-server.js --outDir dist/server",
+    "build": "node init && npm run build:production",
+    "build:local": "node init && vite build --mode development --outDir dist/client --ssrManifest && vite build --mode development --ssr src/entry-server.js --outDir dist/server",
+    "build:production": "node init && vite build --mode production --outDir dist/client --ssrManifest && vite build --mode production --ssr src/entry-server.js --outDir dist/server",
     "preview": "npm run production",
     "test": "node --test server.test.js"
   },

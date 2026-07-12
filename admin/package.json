@@ -4,10 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run local",
+    "dev": "node init && npm run local",
     "local": "node server.js --mode local",
     "production": "node server.js --mode production --prod",
-    "build": "vite build --mode production --outDir dist/client --ssrManifest && vite build --mode production --ssr src/entry-server.js --outDir dist/server",
+    "build": "node init && vite build --mode production --outDir dist/client --ssrManifest && vite build --mode production --ssr src/entry-server.js --outDir dist/server",
     "preview": "npm run production",
     "test": "node --test server.test.js"
   },

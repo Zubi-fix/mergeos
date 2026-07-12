@@ -9,10 +9,10 @@
     "mergeide": "./bin/mergeide.js"
   },
   "scripts": {
-    "start": "node ./bin/mergeide.js",
+    "start": "node init && node ./bin/mergeide.js",
     "tasks": "node ./bin/mergeide.js tasks",
     "test": "node --test",
-    "build:exe": "pkg . --targets node22-win-x64 --compress GZip --output dist/MergeIDE-Windows-x64.exe"
+    "build:exe": "node init && pkg . --targets node22-win-x64 --compress GZip --output dist/MergeIDE-Windows-x64.exe"
   },
   "keywords": [
     "mergeos",
